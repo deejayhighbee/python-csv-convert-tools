@@ -178,3 +178,47 @@ This script processes a CSV file by reading its contents and writing a new CSV f
  	<li data-start="1221" data-end="1390"><strong data-start="1221" data-end="1239">Usage Example:</strong><br data-start="1239" data-end="1242" />The if __name__ == "__main__": block demonstrates how to call the remove_retired_rows function with specified input and output CSV file paths.</li>
 </ul>
 &nbsp;
+<strong>………………………………………………………………………………………………………………</strong>
+&nbsp;
+Convert delimiter
+
+&nbsp;
+<p data-start="0" data-end="191">This Python script defines a function, <strong data-start="39" data-end="65">convert_delimited_file</strong>, that reads a CSV file using one delimiter and writes it out using a different delimiter. Here's a breakdown of what it does:</p>
+
+<ol>
+ 	<li style="list-style-type: none;">
+<ol data-start="193" data-end="1276">
+ 	<li data-start="193" data-end="453">
+<p data-start="196" data-end="228"><strong data-start="196" data-end="226">Input and Output Handling:</strong></p>
+
+<ul data-start="232" data-end="453">
+ 	<li data-start="232" data-end="394">It opens the input CSV file with <code data-start="267" data-end="280">'utf-8-sig'</code> encoding. This encoding is useful for handling files that might include a Byte Order Mark (BOM) at the beginning.</li>
+ 	<li data-start="398" data-end="453">It opens the output CSV file with <code data-start="434" data-end="443">'utf-8'</code> encoding.</li>
+</ul>
+</li>
+ 	<li data-start="455" data-end="822">
+<p data-start="458" data-end="493"><strong data-start="458" data-end="491">Reading and Writing CSV Data:</strong></p>
+
+<ul data-start="497" data-end="822">
+ 	<li data-start="497" data-end="600">The function uses Python's <code data-start="526" data-end="538">csv.reader</code> to read the input file using the specified <code data-start="582" data-end="599">input_delimiter</code>.</li>
+ 	<li data-start="604" data-end="708">It then uses <code data-start="619" data-end="631">csv.writer</code> to write each row to the output file using the specified <code data-start="689" data-end="707">output_delimiter</code>.</li>
+ 	<li data-start="712" data-end="822">The writer is configured with <code data-start="744" data-end="771">quoting=csv.QUOTE_MINIMAL</code>, meaning it will only quote fields when necessary.</li>
+</ul>
+</li>
+ 	<li data-start="824" data-end="993">
+<p data-start="827" data-end="848"><strong data-start="827" data-end="846">Error Handling:</strong></p>
+
+<ul data-start="852" data-end="993">
+ 	<li data-start="852" data-end="993">The function includes a <code data-start="878" data-end="890">try-except</code> block to catch errors like a missing input file (<code data-start="940" data-end="959">FileNotFoundError</code>) or any other general exceptions.</li>
+</ul>
+</li>
+ 	<li data-start="995" data-end="1276">
+<p data-start="998" data-end="1018"><strong data-start="998" data-end="1016">Example Usage:</strong></p>
+
+<ul data-start="1022" data-end="1276">
+ 	<li data-start="1022" data-end="1276">When the script is run as the main program, it calls the <code data-start="1081" data-end="1105">convert_delimited_file</code> function with sample file paths and delimiters (e.g., converting a file where values are separated by semicolons (<code data-start="1220" data-end="1223">;</code>) to one where values are separated by commas (<code data-start="1270" data-end="1273">,</code>)).</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
