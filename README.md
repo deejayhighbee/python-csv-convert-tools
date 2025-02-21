@@ -257,3 +257,57 @@ This script processes a CSV file by reading its contents and writing a new CSV f
 </ol>
 </li>
 </ol>
+<p data-start="0" data-end="167"></p>
+&nbsp;
+<strong>………………………………………………………………………………………………………………</strong>
+&nbsp;
+
+
+<p data-start="0" data-end="167"><a href="https://github.com/deejayhighbee/python-csv-convert-tools/blob/main/json_to_csv.py"><strong>Convert .json to .csv</strong></a></p>
+<p data-start="0" data-end="167">This Python script converts a JSON file into a CSV file while ensuring that all fields are treated as plain text. Here's a step-by-step breakdown of its functionality:</p>
+
+<ol data-start="169" data-end="1453">
+ 	<li data-start="169" data-end="378">
+<p data-start="172" data-end="191"><strong data-start="172" data-end="189">JSON Parsing:</strong></p>
+
+<ul data-start="195" data-end="378">
+ 	<li data-start="195" data-end="248">The script opens and reads the specified JSON file.</li>
+ 	<li data-start="252" data-end="378">It expects the JSON data to be a list of dictionaries. If it isn't, or if the list is empty, the script raises a ValueError.</li>
+</ul>
+</li>
+ 	<li data-start="380" data-end="592">
+<p data-start="383" data-end="412"><strong data-start="383" data-end="410">Extracting Field Names:</strong></p>
+
+<ul data-start="416" data-end="592">
+ 	<li data-start="416" data-end="519">It uses an <code data-start="429" data-end="442">OrderedDict</code> to extract and preserve the order of keys from all dictionaries in the list.</li>
+ 	<li data-start="523" data-end="592">These keys become the column headers (fieldnames) for the CSV file.</li>
+</ul>
+</li>
+ 	<li data-start="594" data-end="935">
+<p data-start="597" data-end="615"><strong data-start="597" data-end="613">CSV Writing:</strong></p>
+
+<ul data-start="619" data-end="935">
+ 	<li data-start="619" data-end="670">The script opens the output CSV file for writing.</li>
+ 	<li data-start="674" data-end="792">It uses <code data-start="684" data-end="700">csv.DictWriter</code> with the <code data-start="710" data-end="733">quoting=csv.QUOTE_ALL</code> option, which means every field in the CSV will be quoted.</li>
+ 	<li data-start="796" data-end="935">Each value in the dictionaries is converted to a string (or set to an empty string if the value is <code data-start="897" data-end="903">None</code>) before being written as a row.</li>
+</ul>
+</li>
+ 	<li data-start="937" data-end="1134">
+<p data-start="940" data-end="961"><strong data-start="940" data-end="959">Error Handling:</strong></p>
+
+<ul data-start="965" data-end="1134">
+ 	<li data-start="965" data-end="1134">The script includes multiple error checks to handle file not found errors, JSON decoding issues, and other unexpected exceptions, providing informative error messages.</li>
+</ul>
+</li>
+ 	<li data-start="1136" data-end="1453">
+<p data-start="1139" data-end="1168"><strong data-start="1139" data-end="1166">Command-Line Interface:</strong></p>
+
+<ul data-start="1172" data-end="1453">
+ 	<li data-start="1172" data-end="1365">The script uses the <code data-start="1194" data-end="1204">argparse</code> module to allow users to run it from the command line, requiring two positional arguments: the path to the input JSON file and the path for the output CSV file.</li>
+ 	<li data-start="1369" data-end="1453">When executed directly, it parses the arguments and calls the conversion function.</li>
+</ul>
+</li>
+</ol>
+<p data-start="0" data-end="117">Assuming you've saved the script as, for example, <code data-start="50" data-end="66">json_to_csv.py</code>, you would run it from the command line like this:</p>
+<p data-start="0" data-end="117"><code class="!whitespace-pre language-bash">python json_to_csv.py input.json output.csv</code></p>
+<p data-start="176" data-end="394" data-is-last-node="" data-is-only-node="">Replace <code data-start="184" data-end="196">input.json</code> with the path to your JSON file and <code data-start="233" data-end="245">output.csv</code> with the desired path for the CSV output. If you're using Python 3 and your system requires it, you might need to use <code data-start="364" data-end="373">python3</code> instead of <code data-start="385" data-end="393">python</code>.</p>
