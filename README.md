@@ -26,6 +26,7 @@ The list of these flattened dictionaries is then converted into a pandas DataFra
 Exporting to CSV:
 Finally, the DataFrame is exported to a CSV file named output.csv, and a confirmation message is printed.
 ………………………………………………………………………………………………………………
+
 **Combine CSV File**
 
 This script combines multiple CSV files from a specified folder into a single CSV file while preserving their original encoding. Here’s a breakdown of its functionality:
@@ -48,6 +49,7 @@ o	When run as the main module, it defines a folder (here, 'main') and an output 
 In summary, the code reads all CSV files in the folder, concatenates their data into a single CSV file while ensuring only one header row is included, and maintains the original file encoding.
 
 …………………………………………………………………………………………………………………
+
 **Convert .dat to .csv**
 
 This script is a utility for converting fixed-width .dat files into CSV format. Here's a detailed breakdown:
@@ -101,4 +103,5 @@ o	It keeps count of how many rows are written and how many are skipped.
 After processing all rows, the script prints a summary stating how many rows were written to the output file and how many rows were skipped due to the "retired" status.
 •	Usage Example:
 The if __name__ == "__main__": block demonstrates how to call the remove_retired_rows function with specified input and output CSV file paths.
+
 
