@@ -4,7 +4,9 @@ This script performs a complete data conversion process:
 
 <strong>Imports and Setup: It imports necessary libraries:</strong>
 
-bson for decoding BSON files. pandas for data manipulation and creating a DataFrame. json for handling list-to-string conversion.
+bson for decoding BSON files. 
+pandas for data manipulation and creating a DataFrame. 
+json for handling list-to-string conversion.
 
 <strong>Flattening Nested Dictionaries:</strong>
 
