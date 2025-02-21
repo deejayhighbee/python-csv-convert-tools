@@ -218,6 +218,41 @@ This script processes a CSV file by reading its contents and writing a new CSV f
 <ul data-start="1022" data-end="1276">
  	<li data-start="1022" data-end="1276">When the script is run as the main program, it calls the <code data-start="1081" data-end="1105">convert_delimited_file</code> function with sample file paths and delimiters (e.g., converting a file where values are separated by semicolons (<code data-start="1220" data-end="1223">;</code>) to one where values are separated by commas (<code data-start="1270" data-end="1273">,</code>)).</li>
 </ul>
+
+
+&nbsp;
+<strong>………………………………………………………………………………………………………………</strong>
+&nbsp;
+
+<p data-start="0" data-end="117"><a href="https://github.com/deejayhighbee/python-csv-convert-tools/blob/main/encode.py"><strong>Detect character encoding</strong></a></p>
+<p data-start="0" data-end="117">This Python script uses the <strong data-start="28" data-end="39">chardet</strong> library to detect the character encoding of a given file. Here’s a breakdown:</p>
+
+<ol data-start="119" data-end="758">
+ 	<li data-start="119" data-end="342">
+<p data-start="122" data-end="146"><strong data-start="122" data-end="144">Reading File Data:</strong></p>
+
+<ul data-start="150" data-end="342">
+ 	<li data-start="150" data-end="222">The function <code data-start="165" data-end="182">detect_encoding</code> opens the file in binary mode (<code data-start="214" data-end="220">'rb'</code>).</li>
+ 	<li data-start="226" data-end="342">It reads a specified number of bytes (default is 10,000) from the file. This sample is used to guess the encoding.</li>
+</ul>
+</li>
+ 	<li data-start="344" data-end="606">
+<p data-start="347" data-end="376"><strong data-start="347" data-end="374">Detecting the Encoding:</strong></p>
+
+<ul data-start="380" data-end="606">
+ 	<li data-start="380" data-end="514">The raw byte data is passed to <code data-start="413" data-end="431">chardet.detect()</code>, which analyzes it and returns a dictionary containing details about the encoding.</li>
+ 	<li data-start="518" data-end="606">The function then extracts and returns the value associated with the <code data-start="589" data-end="601">'encoding'</code> key.</li>
+</ul>
+</li>
+ 	<li data-start="608" data-end="758">
+<p data-start="611" data-end="623"><strong data-start="611" data-end="621">Usage:</strong></p>
+
+<ul data-start="627" data-end="758">
+ 	<li data-start="627" data-end="715">In the main block, the script calls <code data-start="665" data-end="682">detect_encoding</code> on a file named <code data-start="699" data-end="714">'file.csv'</code>.</li>
+ 	<li data-start="719" data-end="758">It then prints the detected encoding.</li>
+</ul>
+</li>
+</ol>
 </li>
 </ol>
 </li>
