@@ -1,4 +1,4 @@
-<strong>Convert bson to csv</strong>
+<a href="https://github.com/deejayhighbee/python-csv-convert-tools/blob/main/bson_convert.py"><strong>Convert bson to csv</strong></a>
 
 This script performs a complete data conversion process:
 
@@ -24,7 +24,7 @@ Finally, the DataFrame is exported to a CSV file named output.csv, and a confirm
 
 <strong>………………………………………………………………………………………………………………</strong>
 
-<strong>Combine csv file</strong>
+<a href="https://github.com/deejayhighbee/python-csv-convert-tools/blob/main/combine_csv.py"><strong>Combine csv files</strong></a>
 
 This script combines multiple CSV files from a specified folder into a single CSV file while preserving their original encoding. Here’s a breakdown of its functionality:
 <ol>
@@ -68,11 +68,9 @@ This script combines multiple CSV files from a specified folder into a single CS
 </ol>
 In summary, the code reads all CSV files in the folder, concatenates their data into a single CSV file while ensuring only one header row is included, and maintains the original file encoding.
 
-&nbsp;
-
 <strong>…………………………………………………………………………………………………………………</strong>
 
-<strong>Convert .dat to .csv</strong>
+<a href="https://github.com/deejayhighbee/python-csv-convert-tools/blob/main/dat_to_csv.py"><strong>Convert .dat to .csv</strong></a>
 
 This script is a utility for converting fixed-width .dat files into CSV format. Here's a detailed breakdown:
 <ol>
@@ -143,9 +141,7 @@ This script is a utility for converting fixed-width .dat files into CSV format. 
 </ol>
 <strong>………………………………………………………………………………………………………………</strong>
 
-<strong> </strong>
-
-<strong>Delete rows where</strong>
+<a href="https://github.com/deejayhighbee/python-csv-convert-tools/blob/main/delete_rows_where.py"><strong>Delete rows where</strong></a>
 
 This script processes a CSV file by reading its contents and writing a new CSV file that excludes any rows where the "status" column is set to "retired." Here’s a detailed explanation:
 <ul>
