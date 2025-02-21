@@ -27,6 +27,7 @@ Exporting to CSV:
 Finally, the DataFrame is exported to a CSV file named output.csv, and a confirmation message is printed.
 ………………………………………………………………………………………………………………
 **Combine CSV File**
+
 This script combines multiple CSV files from a specified folder into a single CSV file while preserving their original encoding. Here’s a breakdown of its functionality:
 1.	Gathering CSV Files:
 o	It uses the glob module to find all files ending in .csv within the given folder.
@@ -48,6 +49,7 @@ In summary, the code reads all CSV files in the folder, concatenates their data 
 
 …………………………………………………………………………………………………………………
 **Convert .dat to .csv**
+
 This script is a utility for converting fixed-width .dat files into CSV format. Here's a detailed breakdown:
 1.	Encoding Detection:
 o	Function: detect_encoding
@@ -83,6 +85,7 @@ o	The script is designed to run as a standalone program. When executed, it autom
 ………………………………………………………………………………………………………………
 
 **Delete rows where**
+
 This script processes a CSV file by reading its contents and writing a new CSV file that excludes any rows where the "status" column is set to "retired." Here’s a detailed explanation:
 •	File Opening:
 The script opens the input CSV file for reading and the output CSV file for writing using UTF-8 encoding. It handles files in binary mode with proper newline settings to maintain formatting.
